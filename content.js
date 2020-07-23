@@ -1,11 +1,12 @@
-var pageTitlePattern=/\bIANA/;
+var hostPattern=/^console\.cloud\.google\.com/;
 var authUserPattern=/\&authuser\=/;
-var authuser = "&authuser=1"
+var authUserString = "&authuser=1"
 var newurl;
-console.log(window.document.title);
-if (pageTitlePattern.test(window.document.title) && !authUserPattern.test(window.document.location)) // if it matches pattern defined above
+
+// if page host is GCP and authuser param not in URL
+if (hostPattern.test(window.document.location.host) && !authUserPattern.test(window.document.location))
 {
-  newurl = window.location.href + authuser;
-  console.log("new url is: " + newurl);
+  newurl = window.location.href + authUserString;
+  console.log("Redirecting to new url with authuser=1: " + newurl);
   chrome.extension.sendRequest({redirect: newurl}); // send message to redirect
 }
