@@ -1,6 +1,12 @@
 {
-   "name": "AuthUser Appender",
-   "version": "1.0",
-   "description": "Automatically append the authuser param to GCP URLs",
+  "name": "AuthUser Appender",
+  "version": "1.0",
+  "description": "Automatically append the authuser param to GCP URLs",
+  "content_scripts": [
+    {
+      "matches": ["https://example.com/*"],
+      "js": ["contentScript.js"]
+    }
+  ],
    "manifest_version": 2
  }
