@@ -2,9 +2,5 @@
    "name": "AuthUser Appender",
    "version": "1.0",
    "description": "Automatically append the authuser param to GCP URLs",
-   "background": {
-     "scripts": ["background.js"],
-     "persistent": false
-   },
    "manifest_version": 2
  }
