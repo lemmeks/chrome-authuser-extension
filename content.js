@@ -8,5 +8,10 @@ if (hostPattern.test(window.document.location.host) && !authUserPattern.test(win
 {
   newurl = window.location.href + authUserString;
   console.log("Redirecting to new url with authuser=1: " + newurl);
-  chrome.extension.sendRequest({redirect: newurl}); // send message to redirect
+  // chrome.extension.sendRequest({redirect: newurl}); // send message to redirect
+  // chrome.runtime.sendMessage({loadURL: true});
 }
+
+// code above would not run in this new implementation
+chrome.runtime.sendMessage({loadURL: true});
+
