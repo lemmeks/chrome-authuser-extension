@@ -3,8 +3,7 @@
   "version": "1.0",
   "description": "Automatically append the authuser param to GCP URLs",
   "permissions": [
-    "webRequest",
-    "*://*.example.com/"
+    "activeTab"
   ],
   "background": {
      "page":"bg.html"
