@@ -2,6 +2,10 @@
   "name": "AuthUser Appender",
   "version": "1.0",
   "description": "Automatically append the authuser param to GCP URLs",
+  "icons": { "16": "images/authuser_redir16.png",
+	     "32": "images/authuser_redir32.png",
+	     "48": "images/authuser_redir48.png",
+	    "128": "images/authuser_redir128.png" },
   "permissions": [
     "activeTab"
   ],
